@@ -1,0 +1,37 @@
+<div class="search_container">
+  <input
+    class="search"
+    (change)="onInputChange($event.target['value'])"
+    placeholder="Search"
+  />
+  <button (click)="onCreate()">Create</button>
+</div>
+
+<table class="user_table">
+  <thead class="user_table_header">
+    <tr>
+      <th
+        class="sort-headers"
+        *ngFor="let col of columns"
+        (click)="sort(col)"
+        [ngClass]="{ asc: sortingOrder }"
+      >
+        {{ col }}
+      </th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody class="user_table_body">
+    <tr *ngFor="let user of usersData" (click)="onRowClick(user, $event)">
+      <td>{{ user["name"] }}</td>
+      <td>{{ user["email"] }}</td>
+      <td>{{ user["company"]["name"] }}</td>
+      <td class="actions">
+        <button class="edit" (click)="onEdit(user['id'], $event)">Edit</button>
+        <button class="delete" (click)="onDelete(user['id'], $event)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>User Information</h2>
+
+  <div *ngIf="isLoading">Loading...</div>
+  <ul class="user_detail" *ngIf="!isLoading">
+    <li><strong>Name-</strong> {{ userInfoData["name"] }}</li>
+    <li><strong>Email-</strong> {{ userInfoData["email"] }}</li>
+    <li><strong>Phone-</strong> {{ userInfoData["phone"] }}</li>
+    <li><strong>Company-</strong> {{ userInfoData["company"]["name"] }}</li>
+    <li><strong>Website-</strong> {{ userInfoData["website"] }}</li>
+  </ul>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" formControlName="name" placeholder="Name" />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" placeholder="Email" />
+    </div>
+    <div>
+      <label for="company">Company</label>
+      <input type="text" formControlName="company" placeholder="Company" />
+    </div>
+    <div>
+      <label for="address">Address</label>
+      <input type="text" formControlName="address" placeholder="Address" />
+    </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input type="text" formControlName="phone" placeholder="Phone" />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>

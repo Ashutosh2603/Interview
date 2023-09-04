@@ -1,0 +1,9 @@
+
+.user_detail{
+list-style: none;
+letter-spacing: 2px;
+font-size: large;
+}
+.user_detail li{
+    margin: 5px;
+}
